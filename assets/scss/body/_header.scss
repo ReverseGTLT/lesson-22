@@ -1,0 +1,151 @@
+@use "../presets" as *;
+
+.header {
+    position: absolute;
+    color: $color-white;
+    width: 100%;
+    padding-top: 50px;
+    z-index: 1;
+
+    @include md {
+        padding-top: 20px;
+    }
+
+    &-box {
+        display: grid;
+        grid-template-areas: "lo in""lo na";
+        justify-content: space-between;
+        align-items: center;
+
+        @include md {
+            grid-template-areas: "in in""lo na";
+            gap: 20px;
+
+        }
+    }
+
+    &-logo {
+        grid-area: lo;
+        &__image {
+            @include md {
+                width: 77.5px;
+            }
+        }
+    }
+
+    &-info {
+        grid-area: in;
+        display: flex;
+        gap: $gap;
+        align-items: center;
+
+        @include md {
+            justify-content: space-between;
+        }
+
+        &__list {
+            display: flex;
+
+        }
+
+        &__address {
+            line-height: 19px;
+
+            @include md {
+                display: none;
+            }
+        }
+
+        &__telephone {
+            &-link {
+                color: $color-white;
+                font-weight: 700;
+                line-height: 19px;
+
+                @include md {
+                    color: $color-grey-text;
+                }
+            }
+        }
+
+        &__social {
+            width: 24px;
+            height: 24px;
+            background-image: url(../../../images/header/header-facebook.svg);
+            background-position: 0 50%;
+            background-repeat: no-repeat;
+            transition: 0.3s;
+
+            @include md {
+                display: none;
+            }
+
+            &-link {
+                padding: 12px;
+            }
+        }
+
+        &__social:hover {
+            background-image: url(../../../images/header/header-facebook-hover.svg);
+        }
+    }
+
+    &-navbar {
+        grid-area: na;
+        justify-self: end;
+        padding-top: 15px;
+        @include md {
+            padding-top: 0;
+        }
+
+        &__list {
+            display: flex;
+            gap: 17px;
+
+            @include md {
+                display: none;
+            }
+        }
+    }
+}
+
+.list-item>.active {
+    background-color: $color-accent;
+    transition: 0.3s;
+    color: $color-white;
+}
+
+.list-item {
+
+    &__btn {
+        background-color: transparent;
+        border: none;
+        padding: 5px 6px;
+        border-radius: 5px;
+        color: $color-white;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 14px;
+        letter-spacing: 1px;
+        transition: 0.3s;
+
+        @include md {
+            color: $color-grey-text;
+        }
+    }
+}
+
+.list-item__btn:hover {
+    background-color: $color-grey-bg-alt;
+}
+
+.list-item__link {
+    color: $color-white;
+    line-height: 21px;
+    font-size: 18px;
+    transition: 0.3s;
+
+.list-item__link:hover {
+        color: $color-accent;
+    }
+}

@@ -1,0 +1,47 @@
+@use "../presets" as *;
+
+.greetings {
+    position: relative;
+    background: $color-gradient-soft;
+    color: $color-white;
+    &-box {
+        background: url(../../../images/main/greetings/greetings-bg.svg) no-repeat bottom;
+        @include sm {
+            background:none
+        }
+    }
+    &-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        min-height: 800px;
+        background: url(../../../images/main/greetings/greetings-leg.svg) no-repeat bottom;
+
+        &__title {
+            font-weight: 400;
+            line-height: 45px;
+            max-width: 600px;
+            margin-bottom: 351px;
+            font-size: 38px;
+            text-align: center;
+        }
+    }
+
+    &-scroll {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 200px;
+        background: $color-gradient-greetings;
+        &__btn {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            margin-bottom: 17px;
+            cursor: pointer;
+        }
+    }
+}
