@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>hlegal</title>
 </head>
 
-<body>
+<body">
     <div class="header">
         <div class="header-box container">
             <div class="header-logo">
@@ -37,32 +37,40 @@
                 </div>
             </div>
             <nav class="header-navbar">
-                <div class="header-navbar__hamburger">
-                    <span class="header-navbar__btn-row"></span>
-                    <span class="header-navbar__btn-row"></span>
-                    <span class="header-navbar__btn-row"></span>
+                <div class="header-navbar__mobile" id="mobile">
+                    <div class="header-navbar__trigger" id="mobileClose">
+                        <span class="header-navbar__trigger-item"></span>
+                        <span class="header-navbar__trigger-item"></span>
+                    </div>
+                    <ul class="header-navbar__list list" id="navList">
+                        <li class="list-item">
+                            <a class="list-item__link" href="#">про нас</a>
+                        </li>
+                        <li class="list-item">
+                            <a class="list-item__link" href="#">послуги</a>
+                        </li>
+                        <li class="list-item">
+                            <a class="list-item__link" href="#">команда</a>
+                        </li>
+                        <li class="list-item">
+                            <a class="list-item__link" href="#">публікації</a>
+                        </li>
+                        <li class="list-item">
+                            <a class="list-item__link" href="#">контакти</a>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="header-navbar__list list">
-                    <li class="list-item">
-                        <a class="list-item__link" href="#">про нас</a>
-                    </li>
-                    <li class="list-item">
-                        <a class="list-item__link" href="#">послуги</a>
-                    </li>
-                    <li class="list-item">
-                        <a class="list-item__link" href="#">команда</a>
-                    </li>
-                    <li class="list-item">
-                        <a class="list-item__link" href="#">публікації</a>
-                    </li>
-                    <li class="list-item">
-                        <a class="list-item__link" href="#">контакти</a>
-                    </li>
-                </ul>
+                <div class="header-burger">
+                    <button class="header-burger__button" type="button" id="button">
+                        <span class="header-burger__item"></span>
+                        <span class="header-burger__item"></span>
+                        <span class="header-burger__item"></span>
+                    </button>
+                </div>
             </nav>
         </div>
     </div>
-    <div class="main">
+    <div class="main" id="blur">
         <section class="greetings">
             <div class="greetings-box">
                 <div class="greetings-info">
