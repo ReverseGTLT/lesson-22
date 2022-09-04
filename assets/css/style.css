@@ -1,20 +1,20 @@
 @font-face {
   font-family: "TT Norms";
-  src: url(../../../fonts/Regular/TTNorms-Regular.woff2) format("woff2");
+  src: url(../../fonts/Regular/TTNorms-Regular.woff2) format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "TT Norms";
-  src: url(../../../fonts/Medium/TTNorms-Medium.woff2) format("woff2");
+  src: url(../../fonts/Medium/TTNorms-Medium.woff2) format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "TT Norms";
-  src: url(../../../fonts/Bold/TTNorms-Bold.woff2) format("woff2");
+  src: url(../../fonts/Bold/TTNorms-Bold.woff2) format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -103,7 +103,7 @@ address {
 .header-info__social {
   width: 24px;
   height: 24px;
-  background-image: url(../../../images/header/header-facebook.svg);
+  background-image: url(../../images/header/header-facebook.svg);
   background-position: 0 50%;
   background-repeat: no-repeat;
   -webkit-transition: 0.3s;
@@ -114,7 +114,7 @@ address {
   padding: 12px;
 }
 .header-info__social:hover {
-  background-image: url(../../../images/header/header-facebook-hover.svg);
+  background-image: url(../../images/header/header-facebook-hover.svg);
 }
 .header-navbar {
   grid-area: na;
@@ -267,7 +267,7 @@ nav .list-item:hover {
   color: #ffffff;
 }
 .greetings-box {
-  background: url(../../../images/main/greetings/greetings-bg.svg) no-repeat bottom;
+  background: url(../../images/main/greetings/greetings-bg.svg) no-repeat bottom;
 }
 .greetings-info {
   display: -webkit-box;
@@ -284,7 +284,7 @@ nav .list-item:hover {
       -ms-flex-align: center;
           align-items: center;
   min-height: 800px;
-  background: url(../../../images/main/greetings/greetings-leg.svg) no-repeat bottom;
+  background: url(../../images/main/greetings/greetings-leg.svg) no-repeat bottom;
 }
 .greetings-info__title {
   font-weight: 400;

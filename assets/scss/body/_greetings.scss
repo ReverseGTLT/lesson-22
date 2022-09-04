@@ -5,7 +5,7 @@
     background: $color-gradient-soft;
     color: $color-white;
     &-box {
-        background: url(../../../images/main/greetings/greetings-bg.svg) no-repeat bottom;
+        background: url(../../images/main/greetings/greetings-bg.svg) no-repeat bottom;
         @include sm {
             background:none
         }
@@ -16,7 +16,7 @@
         justify-content: flex-end;
         align-items: center;
         min-height: 800px;
-        background: url(../../../images/main/greetings/greetings-leg.svg) no-repeat bottom;
+        background: url(../../images/main/greetings/greetings-leg.svg) no-repeat bottom;
 
         &__title {
             font-weight: 400;
