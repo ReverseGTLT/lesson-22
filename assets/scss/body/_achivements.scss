@@ -1,11 +1,126 @@
 @use "../presets" as *;
 
-.achivements-value {
-    display: none;
+$id: (
+    "#first",
+    "#second",
+    "#third",
+    "#fourth"
+);
+
+@each $i in $id {
+    #{$i}:checked~.achivements-values #{$i}Value {
+        display: block;
+    }
 }
 
-@each $i in #first, #second, #third, #fourth {
-    #{$i}:checked ~ .achivements-values #{$i}Value {
+@each $e in $id {
+    #{$e}:checked~.achivements-designations #{$e}Key {
+        border-right: 4px solid $color-after;
+        margin-left: 40px;
+    }
+}
+
+.achivements {
+    background: $color-gradient-supersoft;
+
+    &-box {
+        display: flex;
+        padding-top: 80px;
+    }
+
+    &-input {
+        display: none;
+    }
+
+    &-designations {
+        position: relative;
+        width: 500px;
+        padding-right: 42px;
+        margin-right: 38px;
+        padding-left: 134px;
+        letter-spacing: 0.04em;
+    }
+
+    &-designations::after {
+        content: '';
+        width: 4px;
+        position: absolute;
+        height: 100%;
+        background-color: $color-white;
+        top: 0;
+        right: 0;
+        bottom: 0;
+
+    }
+
+    &-key {
+        cursor: pointer;
+        font-size: 42px;
+        line-height: 50px;
+        font-weight: 500;
+
+        position: relative;
+        text-align: right;
         display: block;
+        color: $color-grey-text;
+    }
+    /*&-key::after {
+        content: '';
+        border-right: 4px solid $color-after;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -42px;
+        width: 4px;
+        height: 100%;
+        z-index: 2;
+    }*/
+    &-key:not(:nth-of-type(4)) {
+        padding-bottom: 21px;
+    }
+    &-key:hover {
+        background: $color-gradient-red-text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &-values {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 120px;
+    }
+
+    &-value {
+        display: none;
+        color: $color-white;
+
+        &__info {
+
+            &-headernote {
+
+                @include md-min {
+                    display: none;
+                }
+            }
+
+            &-title {
+                font-size: 32px;
+                line-height: 38px;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+
+            &-description {
+                font-size: 21px;
+                line-height: 30px;
+            }
+        }
+    }
+
+    &-point {
+        @include md-min {
+            display: none;
+        }
     }
 }

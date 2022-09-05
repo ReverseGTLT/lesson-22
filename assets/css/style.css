@@ -335,10 +335,6 @@ address {
   cursor: pointer;
 }
 
-.achivements-value {
-  display: none;
-}
-
 #first:checked ~ .achivements-values #firstValue {
   display: block;
 }
@@ -355,12 +351,126 @@ address {
   display: block;
 }
 
+#first:checked ~ .achivements-designations #firstKey {
+  border-right: 4px solid #F0145A;
+  margin-left: 40px;
+}
+
+#second:checked ~ .achivements-designations #secondKey {
+  border-right: 4px solid #F0145A;
+  margin-left: 40px;
+}
+
+#third:checked ~ .achivements-designations #thirdKey {
+  border-right: 4px solid #F0145A;
+  margin-left: 40px;
+}
+
+#fourth:checked ~ .achivements-designations #fourthKey {
+  border-right: 4px solid #F0145A;
+  margin-left: 40px;
+}
+
+.achivements {
+  background: -o-linear-gradient(221.43deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  /*&-key::after {
+      content: '';
+      border-right: 4px solid $color-after;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: -42px;
+      width: 4px;
+      height: 100%;
+      z-index: 2;
+  }*/
+}
+.achivements-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 80px;
+}
+.achivements-input {
+  display: none;
+}
+.achivements-designations {
+  position: relative;
+  width: 500px;
+  padding-right: 42px;
+  margin-right: 38px;
+  padding-left: 134px;
+  letter-spacing: 0.04em;
+}
+.achivements-designations::after {
+  content: "";
+  width: 4px;
+  position: absolute;
+  height: 100%;
+  background-color: #ffffff;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.achivements-key {
+  cursor: pointer;
+  font-size: 42px;
+  line-height: 50px;
+  font-weight: 500;
+  position: relative;
+  text-align: right;
+  display: block;
+  color: #B3B3BA;
+}
+.achivements-key:not(:nth-of-type(4)) {
+  padding-bottom: 21px;
+}
+.achivements-key:hover {
+  background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.achivements-values {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 120px;
+}
+.achivements-value {
+  display: none;
+  color: #ffffff;
+}
+.achivements-value__info-title {
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.achivements-value__info-description {
+  font-size: 21px;
+  line-height: 30px;
+}
 @media (min-width: 768px) {
   .header-burger {
     display: none;
   }
+  .achivements-value__info-headernote {
+    display: none;
+  }
+  .achivements-point {
+    display: none;
+  }
 }
-
 @media (max-width: 767.8px) {
   .header {
     padding-top: 20px;
