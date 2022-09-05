@@ -113,14 +113,17 @@
                 width: 18px;
                 right: 27px;
             }
+
             &-item:nth-of-type(1) {
                 transform: rotate(45deg);
             }
+
             &-item:nth-of-type(2) {
                 transform: rotate(-45deg);
 
             }
         }
+
         &__trigger:hover {
             background-color: $color-grey-bg-alt;
         }
@@ -183,43 +186,33 @@
 }
 
 nav .list-item {
-    @include md {
-        background-color: $color-grey-bg;
-        padding-block: 11px;
-        border-radius: 10px;
-        transition: 0.3s;
-    }
 
     &__link {
         @include md {
-            padding-block: 5px;
+            padding-block: 11px;
         }
     }
-
 }
-nav .list-item:hover {
-    background-color: $color-grey-bg-alt;
+
+.list-item__btn {
+    background-color: transparent;
+    border: none;
+    padding: 5px 6px;
+    border-radius: 5px;
+    color: $color-white;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+
+    @include md {
+        color: $color-grey-text;
+    }
+
 }
 
 .list-item {
-
-    &__btn {
-        background-color: transparent;
-        border: none;
-        padding: 5px 6px;
-        border-radius: 5px;
-        color: $color-white;
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 14px;
-        letter-spacing: 1px;
-        transition: 0.3s;
-
-        @include md {
-            color: $color-grey-text;
-        }
-    }
-
     &__btn:hover {
         background-color: $color-grey-bg-alt;
     }
@@ -229,10 +222,6 @@ nav .list-item:hover {
         line-height: 21px;
         font-size: 18px;
         transition: 0.3s;
-
-        @include md {
-            color: $color-active-regular;
-        }
     }
 
     &__link:hover {

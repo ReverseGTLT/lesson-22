@@ -200,10 +200,6 @@ address {
   color: #ffffff;
 }
 
-nav .list-item:hover {
-  background-color: #EDEDF7;
-}
-
 .list-item__btn {
   background-color: transparent;
   border: none;
@@ -218,6 +214,7 @@ nav .list-item:hover {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
+
 .list-item__btn:hover {
   background-color: #EDEDF7;
 }
@@ -242,6 +239,9 @@ nav .list-item:hover {
   position: fixed;
   top: 150px;
   right: 0;
+  /*@include md-min {
+      display: none;
+  }*/
 }
 
 .mobile-vision {
@@ -249,6 +249,11 @@ nav .list-item:hover {
   display: -ms-flexbox;
   display: flex;
   gap: 17px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
 }
 
 .vision {
@@ -258,6 +263,23 @@ nav .list-item:hover {
 .blur {
   -webkit-filter: blur(2px);
           filter: blur(2px);
+}
+
+.mobile {
+  background-color: #F5F5FA;
+  padding-block: 11px;
+  border-radius: 10px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.mobile:hover {
+  background-color: #EDEDF7;
+}
+
+.link-hover {
+  color: #24A3FF;
 }
 
 .greetings {
@@ -318,9 +340,6 @@ nav .list-item:hover {
   .header-burger {
     display: none;
   }
-  .mobile-open {
-    display: none;
-  }
   .blur {
     -webkit-filter: blur(0);
             filter: blur(0);
@@ -357,22 +376,11 @@ nav .list-item:hover {
   .header-navbar__list {
     display: none;
   }
-  nav .list-item {
-    background-color: #F5F5FA;
-    padding-block: 11px;
-    border-radius: 10px;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
-  }
   nav .list-item__link {
-    padding-block: 5px;
+    padding-block: 11px;
   }
   .list-item__btn {
     color: #B3B3BA;
-  }
-  .list-item__link {
-    color: #24A3FF;
   }
   .mobile-vision {
     display: -webkit-box;
