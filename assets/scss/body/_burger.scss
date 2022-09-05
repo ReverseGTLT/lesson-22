@@ -1,7 +1,7 @@
 @use "../presets" as *;
 
 .mobile-open {
-    height: 348px;
+    height: 310px;
     width: 335px;
     padding: 16px 20px 20px;
     background-color: $color-white;
@@ -13,7 +13,7 @@
 
 .mobile-vision {
     display: flex;
-    gap: 17px;
+    gap: 11px;
 
     flex-direction: column;
     text-align: center;
@@ -31,20 +31,15 @@
 
 .blur {
     filter: blur(2px);
-
-    @include md-min {
-        filter: blur(0);
-    }
 }
 
 .mobile {
     background-color: $color-grey-bg;
     padding-block: 11px;
     border-radius: 10px;
-    transition: 0.3s;
 }
 
-.mobile:hover {
+.mobile:active {
     background-color: $color-grey-bg-alt;
 }
 

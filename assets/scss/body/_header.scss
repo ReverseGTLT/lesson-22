@@ -97,7 +97,6 @@
             cursor: pointer;
             display: none;
             margin-bottom: 16px;
-            transition: 0.3s;
             border-radius: 40%;
             margin-left: 303px;
             margin-top: 1px;
@@ -124,7 +123,7 @@
             }
         }
 
-        &__trigger:hover {
+        &__trigger:active {
             background-color: $color-grey-bg-alt;
         }
 
@@ -158,6 +157,9 @@
             background-color: transparent;
             border: none;
             cursor: pointer;
+            width: 32px;
+            height: 32px;
+            border-radius: 10px;
 
         }
 
@@ -165,15 +167,20 @@
             display: block;
             height: 2px;
             width: 18px;
+            margin-left: 6px;
             background-color: $color-white;
         }
 
         &__item:nth-of-type(1) {
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         &__item:nth-of-type(2) {
-            margin-bottom: 6px;
+            margin-bottom: 4px;
+        }
+
+        &__button:active {
+            background-color: $color-grey-bg-alt;
         }
 
     }

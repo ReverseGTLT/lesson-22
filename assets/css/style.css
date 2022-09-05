@@ -133,9 +133,6 @@ address {
   cursor: pointer;
   display: none;
   margin-bottom: 16px;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
   border-radius: 40%;
   margin-left: 303px;
   margin-top: 1px;
@@ -165,7 +162,7 @@ address {
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-.header-navbar__trigger:hover {
+.header-navbar__trigger:active {
   background-color: #EDEDF7;
 }
 .header-navbar__list {
@@ -178,18 +175,25 @@ address {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
 }
 .header-burger__item {
   display: block;
   height: 2px;
   width: 18px;
+  margin-left: 6px;
   background-color: #ffffff;
 }
 .header-burger__item:nth-of-type(1) {
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 .header-burger__item:nth-of-type(2) {
-  margin-bottom: 6px;
+  margin-bottom: 4px;
+}
+.header-burger__button:active {
+  background-color: #EDEDF7;
 }
 
 .list-item > .active {
@@ -231,7 +235,7 @@ address {
 }
 
 .mobile-open {
-  height: 348px;
+  height: 310px;
   width: 335px;
   padding: 16px 20px 20px;
   background-color: #ffffff;
@@ -245,7 +249,7 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 17px;
+  gap: 11px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -266,12 +270,9 @@ address {
   background-color: #F5F5FA;
   padding-block: 11px;
   border-radius: 10px;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
 }
 
-.mobile:hover {
+.mobile:active {
   background-color: #EDEDF7;
 }
 
@@ -337,10 +338,6 @@ address {
   .header-burger {
     display: none;
   }
-  .blur {
-    -webkit-filter: blur(0);
-            filter: blur(0);
-  }
 }
 @media (max-width: 767.8px) {
   .header {
@@ -389,9 +386,14 @@ address {
             flex-direction: column;
     text-align: center;
   }
-}
-@media (max-width: 575.8px) {
   .greetings-box {
     background: none;
+  }
+  .greetings-info {
+    min-height: 640px;
+    background-position-y: 204px;
+  }
+  .greetings-info__title {
+    margin-bottom: 263px;
   }
 }
