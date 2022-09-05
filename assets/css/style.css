@@ -236,12 +236,9 @@ address {
   padding: 16px 20px 20px;
   background-color: #ffffff;
   border-radius: 20px;
-  position: fixed;
-  top: 150px;
+  position: absolute;
+  top: 5px;
   right: 0;
-  /*@include md-min {
-      display: none;
-  }*/
 }
 
 .mobile-vision {
