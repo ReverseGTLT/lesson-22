@@ -334,11 +334,33 @@ address {
   margin-bottom: 17px;
   cursor: pointer;
 }
+
+.achivements-value {
+  display: none;
+}
+
+#first:checked ~ .achivements-values #firstValue {
+  display: block;
+}
+
+#second:checked ~ .achivements-values #secondValue {
+  display: block;
+}
+
+#third:checked ~ .achivements-values #thirdValue {
+  display: block;
+}
+
+#fourth:checked ~ .achivements-values #fourthValue {
+  display: block;
+}
+
 @media (min-width: 768px) {
   .header-burger {
     display: none;
   }
 }
+
 @media (max-width: 767.8px) {
   .header {
     padding-top: 20px;

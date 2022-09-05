@@ -1,0 +1,11 @@
+@use "../presets" as *;
+
+.achivements-value {
+    display: none;
+}
+
+@each $i in #first, #second, #third, #fourth {
+    #{$i}:checked ~ .achivements-values #{$i}Value {
+        display: block;
+    }
+}
