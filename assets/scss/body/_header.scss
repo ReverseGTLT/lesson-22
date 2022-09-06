@@ -194,6 +194,10 @@
     color: $color-white;
 }
 
+.list-item>.active:hover {
+    background-color: $color-accent;
+}
+
 nav .list-item {
 
     &__link {
@@ -214,6 +218,7 @@ nav .list-item {
     line-height: 14px;
     letter-spacing: 1px;
     transition: 0.3s;
+    cursor: pointer;
 
     @include md {
         color: $color-grey-text;

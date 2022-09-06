@@ -206,6 +206,10 @@ address {
   color: #ffffff;
 }
 
+.list-item > .active:hover {
+  background-color: #F0145A;
+}
+
 .list-item__btn {
   background-color: transparent;
   border: none;
@@ -219,6 +223,7 @@ address {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .list-item__btn:hover {
@@ -338,63 +343,86 @@ address {
   cursor: pointer;
 }
 
-#first:checked ~ .achivements-values #firstValue {
-  display: block;
-}
-
-#second:checked ~ .achivements-values #secondValue {
-  display: block;
-}
-
-#third:checked ~ .achivements-values #thirdValue {
-  display: block;
-}
-
-#fourth:checked ~ .achivements-values #fourthValue {
-  display: block;
-}
-
 #first:checked ~ .achivements-designations #firstKey {
   border-right: 4px solid #F0145A;
-  right: -42px;
+  right: 0;
   z-index: 2;
   padding-right: 38px;
+}
+
+#first:checked ~ .achivements-designations #firstText {
   background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+#first:checked ~ .achivements-values #firstValue {
+  display: block;
+  opacity: 1;
+}
+
+#first:checked ~ .achivements-points #firstPoint {
+  opacity: 1;
 }
 
 #second:checked ~ .achivements-designations #secondKey {
   border-right: 4px solid #F0145A;
-  right: -42px;
+  right: 0;
   z-index: 2;
   padding-right: 38px;
+}
+
+#second:checked ~ .achivements-designations #secondText {
   background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+#second:checked ~ .achivements-values #secondValue {
+  display: block;
+  opacity: 1;
+}
+
+#second:checked ~ .achivements-points #secondPoint {
+  opacity: 1;
 }
 
 #third:checked ~ .achivements-designations #thirdKey {
   border-right: 4px solid #F0145A;
-  right: -42px;
+  right: 0;
   z-index: 2;
   padding-right: 38px;
+}
+
+#third:checked ~ .achivements-designations #thirdText {
   background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+#third:checked ~ .achivements-values #thirdValue {
+  display: block;
+  opacity: 1;
+}
+
+#third:checked ~ .achivements-points #thirdPoint {
+  opacity: 1;
 }
 
 #fourth:checked ~ .achivements-designations #fourthKey {
   border-right: 4px solid #F0145A;
-  right: -42px;
+  right: 0;
   z-index: 2;
   padding-right: 38px;
+}
+
+#fourth:checked ~ .achivements-designations #fourthText {
   background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
@@ -402,29 +430,27 @@ address {
   -webkit-text-fill-color: transparent;
 }
 
+#fourth:checked ~ .achivements-values #fourthValue {
+  display: block;
+  opacity: 1;
+}
+
+#fourth:checked ~ .achivements-points #fourthPoint {
+  opacity: 1;
+}
+
 .achivements {
-  background: -o-linear-gradient(221.43deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
-  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  background: #323264;
 }
 .achivements-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding-top: 80px;
-  gap: 80px;
+  gap: 40px;
 }
 .achivements-input {
   display: none;
-}
-.achivements-designations {
-  position: relative;
-  letter-spacing: 0.04em;
-  -ms-flex-preferred-size: 0;
-      flex-basis: 0;
-  -webkit-box-flex: 3;
-      -ms-flex-positive: 3;
-          flex-grow: 3;
-  justify-self: end;
 }
 .achivements-designations::after {
   content: "";
@@ -433,7 +459,7 @@ address {
   height: 100%;
   background-color: #ffffff;
   top: 0;
-  right: -42px;
+  right: 0;
   bottom: 0;
 }
 .achivements-key {
@@ -444,12 +470,16 @@ address {
   position: relative;
   text-align: right;
   display: block;
-  color: #B3B3BA;
-}
-.achivements-key:not(:nth-of-type(4)) {
+  padding-right: 42px;
   padding-bottom: 21px;
 }
-.achivements-key:hover {
+.achivements-key--last {
+  padding-bottom: 0;
+}
+.achivements-key__text {
+  color: #B3B3BA;
+}
+.achivements-key__text:hover {
   background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
@@ -469,35 +499,89 @@ address {
           justify-content: center;
   -ms-flex-preferred-size: 0;
       flex-basis: 0;
-  -webkit-box-flex: 3.6;
-      -ms-flex-positive: 3.6;
-          flex-grow: 3.6;
+  -webkit-box-flex: 3.535;
+      -ms-flex-positive: 3.535;
+          flex-grow: 3.535;
 }
 .achivements-value {
+  opacity: 0;
   display: none;
   color: #ffffff;
+  -webkit-animation: value 0.5s normal;
+          animation: value 0.5s normal;
 }
-.achivements-value__info-title {
-  font-size: 32px;
-  line-height: 38px;
-  font-weight: 500;
-  margin-bottom: 20px;
+.achivements-value__info-box {
+  padding-bottom: 8px;
 }
-.achivements-value__info-description {
-  font-size: 21px;
-  line-height: 30px;
+.achivements-value__info-headernote {
+  background: -o-linear-gradient(359.87deg, #EF8080 0.84%, #F0145A 99.96%);
+  background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
+.achivements-point {
+  width: 16px;
+  height: 16px;
+  background-color: #24A3FF;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+@-webkit-keyframes value {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes value {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media (min-width: 768px) {
   .header-burger {
     display: none;
   }
+  .achivements-designations {
+    position: relative;
+    letter-spacing: 0.04em;
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    -webkit-box-flex: 3;
+        -ms-flex-positive: 3;
+            flex-grow: 3;
+    justify-self: end;
+  }
   .achivements-value__info-headernote {
     display: none;
   }
-  .achivements-point {
+  .achivements-value__info-title {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .achivements-value__info-description {
+    font-size: 21px;
+    line-height: 30px;
+  }
+  .achivements-points {
     display: none;
   }
 }
+
 @media (max-width: 767.8px) {
   .header {
     padding-top: 20px;
@@ -554,5 +638,32 @@ address {
   }
   .greetings-info__title {
     margin-bottom: 263px;
+  }
+  .achivements-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 30px;
+    gap: 20px;
+    min-height: 308px;
+  }
+  .achivements-designations {
+    display: none;
+  }
+  .achivements-value__info-title {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .achivements-value__info-description {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .achivements-points {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 14px;
+    margin-inline: auto;
   }
 }
