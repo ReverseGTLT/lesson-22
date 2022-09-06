@@ -76,6 +76,7 @@ address {
 }
 .header-logo {
   grid-area: lo;
+  padding-right: 20px;
 }
 .header-info {
   grid-area: in;
@@ -94,6 +95,7 @@ address {
 }
 .header-info__address {
   line-height: 19px;
+  max-width: 210px;
 }
 .header-info__telephone-link {
   color: #ffffff;
@@ -313,6 +315,7 @@ address {
   margin-bottom: 351px;
   font-size: 38px;
   text-align: center;
+  padding-top: 200px;
 }
 .greetings-scroll {
   position: absolute;
@@ -353,55 +356,72 @@ address {
 
 #first:checked ~ .achivements-designations #firstKey {
   border-right: 4px solid #F0145A;
-  margin-left: 40px;
+  right: -42px;
+  z-index: 2;
+  padding-right: 38px;
+  background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #second:checked ~ .achivements-designations #secondKey {
   border-right: 4px solid #F0145A;
-  margin-left: 40px;
+  right: -42px;
+  z-index: 2;
+  padding-right: 38px;
+  background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #third:checked ~ .achivements-designations #thirdKey {
   border-right: 4px solid #F0145A;
-  margin-left: 40px;
+  right: -42px;
+  z-index: 2;
+  padding-right: 38px;
+  background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #fourth:checked ~ .achivements-designations #fourthKey {
   border-right: 4px solid #F0145A;
-  margin-left: 40px;
+  right: -42px;
+  z-index: 2;
+  padding-right: 38px;
+  background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .achivements {
   background: -o-linear-gradient(221.43deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
-  /*&-key::after {
-      content: '';
-      border-right: 4px solid $color-after;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: -42px;
-      width: 4px;
-      height: 100%;
-      z-index: 2;
-  }*/
 }
 .achivements-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding-top: 80px;
+  margin-right: 117px;
 }
 .achivements-input {
   display: none;
 }
 .achivements-designations {
   position: relative;
-  width: 500px;
   padding-right: 42px;
   margin-right: 38px;
-  padding-left: 134px;
   letter-spacing: 0.04em;
+  max-width: 450px;
+  justify-self: end;
 }
 .achivements-designations::after {
   content: "";
@@ -444,7 +464,7 @@ address {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-right: 120px;
+  max-width: 600px;
 }
 .achivements-value {
   display: none;

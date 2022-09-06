@@ -13,10 +13,16 @@ $id: (
     }
 }
 
-@each $e in $id {
-    #{$e}:checked~.achivements-designations #{$e}Key {
+
+@each $key in $id {
+    #{$key}:checked~.achivements-designations #{$key}Key {
         border-right: 4px solid $color-after;
-        margin-left: 40px;
+        right: -42px;
+        z-index: 2;
+        padding-right: 38px;
+        background: $color-gradient-red-text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
 
@@ -24,8 +30,10 @@ $id: (
     background: $color-gradient-supersoft;
 
     &-box {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         padding-top: 80px;
+        margin-right: 117px;
     }
 
     &-input {
@@ -34,11 +42,11 @@ $id: (
 
     &-designations {
         position: relative;
-        width: 500px;
         padding-right: 42px;
         margin-right: 38px;
-        padding-left: 134px;
         letter-spacing: 0.04em;
+        max-width: 450px;
+        justify-self: end;
     }
 
     &-designations::after {
@@ -50,7 +58,6 @@ $id: (
         top: 0;
         right: 0;
         bottom: 0;
-
     }
 
     &-key {
@@ -58,26 +65,16 @@ $id: (
         font-size: 42px;
         line-height: 50px;
         font-weight: 500;
-
         position: relative;
         text-align: right;
         display: block;
         color: $color-grey-text;
     }
-    /*&-key::after {
-        content: '';
-        border-right: 4px solid $color-after;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: -42px;
-        width: 4px;
-        height: 100%;
-        z-index: 2;
-    }*/
+
     &-key:not(:nth-of-type(4)) {
         padding-bottom: 21px;
     }
+
     &-key:hover {
         background: $color-gradient-red-text;
         background-clip: text;
@@ -88,7 +85,7 @@ $id: (
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-right: 120px;
+        max-width: 600px;
     }
 
     &-value {
