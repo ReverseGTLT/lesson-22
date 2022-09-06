@@ -7,9 +7,7 @@ $id: (
     "#fourth"
 );
 
-@each $i in $id {
-
-}
+@each $i in $id {}
 
 
 @each $key in $id {
@@ -18,7 +16,6 @@ $id: (
         right: 0;
         z-index: 2;
         padding-right: 38px;
-
     }
 
     #{$key}:checked~.achivements-designations #{$key}Text {
@@ -44,6 +41,7 @@ $id: (
         display: flex;
         padding-top: 80px;
         gap: 40px;
+
         @include md {
             flex-direction: column;
             padding-top: 30px;
@@ -64,6 +62,7 @@ $id: (
             flex-grow: 3;
             justify-self: end;
         }
+
         @include md {
             display: none;
         }
@@ -112,7 +111,7 @@ $id: (
         flex-direction: column;
         justify-content: center;
         flex-basis: 0;
-        flex-grow: 3.535;
+        flex-grow: 3.74;
     }
 
     &-value {
@@ -125,6 +124,7 @@ $id: (
             &-box {
                 padding-bottom: 8px;
             }
+
             &-headernote {
                 background: $color-gradient-headernote;
                 -webkit-background-clip: text;
@@ -180,6 +180,7 @@ $id: (
             margin-inline: auto;
         }
     }
+
     &-point {
         width: 16px;
         height: 16px;

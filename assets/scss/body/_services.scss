@@ -1,0 +1,163 @@
+@use "../presets" as *;
+
+.services {
+    background: $color-gradient-supersoft;
+    position: relative;
+
+    &-box {
+        padding-top: 80px;
+
+        @include md {
+            padding-top: 45px;
+        }
+    }
+
+    &-header {
+        &__link {
+            color: $color-white;
+            opacity: 0.5;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        &__link::after {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-bottom: 2px solid $color-white;
+            border-right: 2px solid $color-white;
+            opacity: 0.5;
+            transform: rotateZ(315deg);
+            right: -10px;
+            top: 3px;
+        }
+    }
+
+    &-caption {
+        padding-bottom: 69px;
+
+        @include md {
+            padding-bottom: 20px;
+        }
+
+        &__text {
+            font-size: 42px;
+            line-height: 50px;
+            background: $color-gradient-red-text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+
+            @include md {
+                font-size: 32px;
+                line-height: 38px;
+
+            }
+        }
+
+    }
+
+    &-info {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 58px;
+        column-gap: 40px;
+        padding-bottom: 78px;
+
+        @include xl {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 39px;
+            padding-bottom: 0;
+        }
+
+        @include md {
+            grid-template-columns: 1fr;
+        }
+
+        &__item {
+            max-width: 405px;
+
+            @include md {
+                max-width: 100%;
+                display: grid;
+                grid-template-areas: "pc tl""ds ds";
+                grid-template-columns: 64px 1fr;
+                gap: 10px;
+            }
+
+            &-picture {
+                padding-bottom: 16px;
+                grid-area: pc;
+
+                @include md {
+                    width: 64px;
+                    height: 64px;
+                    padding-bottom: 0;
+                }
+            }
+
+            &-image {
+                @include md {
+                    width: 64px;
+                    height: 64px;
+                }
+            }
+
+            &-title {
+                color: $color-active-regular;
+                font-size: 24px;
+                line-height: 28px;
+                font-weight: 500;
+                padding-bottom: 16px;
+                grid-area: tl;
+
+                @include md {
+                    font-size: 18px;
+                    line-height: 21px;
+                    display: flex;
+                    align-self: center;
+
+                }
+            }
+
+            &-description {
+                font-size: 18px;
+                line-height: 26px;
+                color: $color-white;
+                grid-area: ds;
+
+                @include md {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+
+}
+
+.services::before {
+    content: "";
+    position: absolute;
+    height: 10px;
+    background: $bgcolor-services-before;
+    border-radius: 0 0 12px 12px;
+    bottom: -10px;
+    right: 20px;
+    left: 20px;
+}
+
+.services::after {
+    content: "";
+    position: absolute;
+    height: 10px;
+    background: $bgcolor-services-after;
+    border-radius: 0 0 12px 12px;
+    bottom: -20px;
+    right: 40px;
+    left: 40px;
+}
