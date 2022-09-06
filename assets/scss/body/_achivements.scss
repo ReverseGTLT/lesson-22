@@ -30,10 +30,9 @@ $id: (
     background: $color-gradient-supersoft;
 
     &-box {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
         padding-top: 80px;
-        margin-right: 117px;
+        gap: 80px;
     }
 
     &-input {
@@ -42,10 +41,9 @@ $id: (
 
     &-designations {
         position: relative;
-        padding-right: 42px;
-        margin-right: 38px;
         letter-spacing: 0.04em;
-        max-width: 450px;
+        flex-basis: 0;
+        flex-grow: 3;
         justify-self: end;
     }
 
@@ -56,7 +54,7 @@ $id: (
         height: 100%;
         background-color: $color-white;
         top: 0;
-        right: 0;
+        right: -42px;
         bottom: 0;
     }
 
@@ -85,7 +83,8 @@ $id: (
         display: flex;
         flex-direction: column;
         justify-content: center;
-        max-width: 600px;
+        flex-basis: 0;
+        flex-grow: 3.6;
     }
 
     &-value {

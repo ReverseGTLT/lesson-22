@@ -407,20 +407,23 @@ address {
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
 }
 .achivements-box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding-top: 80px;
-  margin-right: 117px;
+  gap: 80px;
 }
 .achivements-input {
   display: none;
 }
 .achivements-designations {
   position: relative;
-  padding-right: 42px;
-  margin-right: 38px;
   letter-spacing: 0.04em;
-  max-width: 450px;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
   justify-self: end;
 }
 .achivements-designations::after {
@@ -430,7 +433,7 @@ address {
   height: 100%;
   background-color: #ffffff;
   top: 0;
-  right: 0;
+  right: -42px;
   bottom: 0;
 }
 .achivements-key {
@@ -464,7 +467,11 @@ address {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 600px;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -webkit-box-flex: 3.6;
+      -ms-flex-positive: 3.6;
+          flex-grow: 3.6;
 }
 .achivements-value {
   display: none;
