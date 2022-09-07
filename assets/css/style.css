@@ -758,6 +758,7 @@ address {
 
 .cases {
   margin-top: 40px;
+  margin-bottom: 30px;
 }
 .cases-box {
   display: -webkit-box;
@@ -801,12 +802,13 @@ address {
 .cases-item--sixth {
   width: 41.5%;
 }
-.cases-item--headernote {
+.cases-item--first {
   position: relative;
   min-height: 258px;
   width: 33%;
+  padding-top: 77px;
 }
-.cases-item--headernote::before {
+.cases-item--first::before {
   content: "УСПІШНІ КЕЙСИ";
   font-size: 14px;
   line-height: 17px;
@@ -820,12 +822,12 @@ address {
   top: 20px;
   left: 20px;
 }
-.cases-item--headernote::after {
+.cases-item--first::after {
   content: "";
   position: absolute;
   width: 100%;
   left: 0;
-  top: 57px;
+  top: 54px;
   border-bottom: 2px solid #ffffff;
 }
 .cases-item__title {
@@ -858,6 +860,9 @@ address {
   padding: 40px;
   border: 1px solid #ffffff;
   text-align: center;
+  opacity: 0;
+  -webkit-animation: value 0.5s normal;
+          animation: value 0.5s normal;
 }
 .cases-item:hover {
   background-color: #EDEDF7;
@@ -865,6 +870,16 @@ address {
 
 .cases-item:hover + .cases-item__description {
   display: block;
+  opacity: 1;
+}
+
+@keyframes value {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 768px) {
@@ -936,6 +951,45 @@ address {
   .team-footnote {
     padding-top: 10px;
     padding-bottom: 0;
+  }
+  .cases {
+    margin-top: 30px;
+  }
+  .cases-item--first {
+    min-height: 197px;
+    width: 100%;
+  }
+  .cases-item__title {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .cases-item__footnote {
+    padding-top: 11px;
+  }
+  .cases-item__description {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .cases-item--second {
+    width: 100%;
+    min-height: 0;
+  }
+  .cases-item--third {
+    width: 100%;
+    min-height: 0;
+  }
+  .cases-item--fourth {
+    width: 100%;
+    min-height: 0;
+  }
+  .cases-item--fifth {
+    width: 100%;
+    min-height: 0;
+  }
+  .cases-item--sixth {
+    width: 100%;
+    min-height: 0;
   }
 }
 

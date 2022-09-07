@@ -4,10 +4,14 @@
     border-radius: 12px;
     background-color: $color-grey-bg;
 }
+
 .cases {
     margin-top: 40px;
+    margin-bottom: 30px;
 
-
+    @include lg {
+        margin-top: 30px;
+    }
     &-box {
         display: flex;
         flex-wrap: wrap;
@@ -24,30 +28,41 @@
         padding: 20px;
         box-sizing: border-box;
         min-height: 198px;
+
         &--second {
             width: 34%;
         }
+
         &--third {
             width: 33%;
         }
+
         &--fourth {
             width: 24%;
         }
+
         &--fifth {
             width: 34.5%;
         }
+
         &--sixth {
-           width: 41.5%;
+            width: 41.5%;
         }
 
-        &--headernote {
+        &--first {
             position: relative;
             min-height: 258px;
             width: 33%;
+            padding-top: 77px;
+
+            @include lg {
+                min-height: 197px;
+                width: 100%;
+            }
 
         }
 
-        &--headernote::before {
+        &--first::before {
             content: "УСПІШНІ КЕЙСИ";
             font-size: 14px;
             line-height: 17px;
@@ -62,12 +77,12 @@
             left: 20px;
         }
 
-        &--headernote::after {
+        &--first::after {
             content: "";
             position: absolute;
             width: 100%;
             left: 0;
-            top: 57px;
+            top: 54px;
             border-bottom: 2px solid $color-white;
         }
 
@@ -77,6 +92,11 @@
             display: flex;
             align-items: flex-end;
             color: $color-main-soft;
+
+            @include lg {
+                font-size: 18px;
+                line-height: 21px;
+            }
         }
 
         &__footnote {
@@ -84,6 +104,10 @@
             line-height: 26px;
             color: $color-grey-text;
             padding-top: 20px;
+
+            @include lg {
+                padding-top: 11px;
+            }
         }
 
         &__description {
@@ -97,13 +121,40 @@
             padding: 40px;
             border: 1px solid $color-white;
             text-align: center;
+            opacity: 0;
+            animation: value 0.5s normal;
+
+            @include lg {
+                order: 0;
+            }
         }
     }
+
     &-item:hover {
         background-color: $color-grey-bg-alt;
     }
 }
 
-.cases-item:hover + .cases-item__description {
+.cases-item:hover+.cases-item__description {
     display: block;
+    opacity: 1;
+}
+
+@include animation;
+
+$c: (
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+);
+
+@each $o in $c {
+    .cases-item--#{$o} {
+        @include lg {
+            width: 100%;
+            min-height: 0;
+        }
+    }
 }

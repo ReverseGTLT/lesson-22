@@ -187,12 +187,4 @@ $id: (
     }
 }
 
-@keyframes value {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
+@include animation
