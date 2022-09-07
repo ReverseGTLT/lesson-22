@@ -1,0 +1,144 @@
+@use "../presets" as *;
+
+.team {
+    padding-top: $gap * 3;
+
+
+    &-item {
+        background-color: $color-grey-bg;
+        border-radius: 12px;
+        display: grid;
+        grid-template-areas: "picture info""picture footnote";
+        row-gap: 20px;
+        column-gap: 40px;
+
+        @include lg {
+            grid-template-areas: "info info""picture footnote";
+            padding: 20px;
+            grid-template-columns: 60px 1fr;
+            column-gap: 10px;
+            row-gap: 0;
+        }
+    }
+
+    &-picture {
+        grid-area: picture;
+        background-image: url(../../images/main/team/image.png);
+        background-repeat: no-repeat;
+        height: 500px;
+        width: 413px;
+
+        @include lg {
+            background-image: url(../../images/main/team/mini.svg);
+            height: 60px;
+            width: 60px;
+            align-self: center;
+        }
+    }
+
+    &-info {
+        grid-area: info;
+        align-self: flex-end;
+        padding-right: 40px;
+        padding-top: 20px;
+
+        @include lg {
+            padding-top: 0;
+            padding-right: 0;
+        }
+
+        &__header {
+            &-link {
+                position: relative;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 17px;
+                color: $color-active-regular;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+
+            &-link::after {
+                content: "";
+                position: absolute;
+                background-color: transparent;
+                border-bottom: 2px solid $color-active-regular;
+                border-right: 2px solid $color-active-regular;
+                height: 6px;
+                width: 6px;
+                right: -10px;
+                top: 4px;
+                transform: rotateZ(315deg);
+            }
+        }
+
+        &__title {
+            font-weight: 700;
+            font-size: 42px;
+            line-height: 50px;
+            background: $color-gradient-red-text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-top: 5px;
+            padding-right: 30px;
+
+            @include lg {
+                font-size: 32px;
+                line-height: 38px;
+                padding-right: 0;
+            }
+        }
+    }
+
+    &-footnote {
+        grid-area: footnote;
+        padding-bottom: 160px;
+        padding-right: 40px;
+
+        @include lg {
+            padding-top: 10px;
+            padding-bottom: 0;
+        }
+
+        &__name {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            color: $color-grey-text;
+        }
+
+        &__post {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: $color-grey-text;
+        }
+    }
+
+    &-point {
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        margin-top: 20px;
+
+        &__object {
+            width: 16px;
+            height: 16px;
+            background-color: $color-active-regular;
+            opacity: 0.2;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+
+            &--active {
+                opacity: 1;
+            }
+        }
+
+        &__object:hover:not(:first-of-type) {
+            opacity: 0.6;
+        }
+
+    }
+}
