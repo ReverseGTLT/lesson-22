@@ -7,9 +7,6 @@ $id: (
     "#fourth"
 );
 
-@each $i in $id {}
-
-
 @each $key in $id {
     #{$key}:checked~.achivements-designations #{$key}Key {
         border-right: 4px solid $color-after;

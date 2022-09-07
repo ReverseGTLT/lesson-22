@@ -1,0 +1,109 @@
+@use "../presets" as *;
+
+.cases-bg {
+    border-radius: 12px;
+    background-color: $color-grey-bg;
+}
+.cases {
+    margin-top: 40px;
+
+
+    &-box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &-item {
+
+
+        border: 1px solid $color-white;
+        flex-direction: column;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: 20px;
+        box-sizing: border-box;
+        min-height: 198px;
+        &--second {
+            width: 34%;
+        }
+        &--third {
+            width: 33%;
+        }
+        &--fourth {
+            width: 24%;
+        }
+        &--fifth {
+            width: 34.5%;
+        }
+        &--sixth {
+           width: 41.5%;
+        }
+
+        &--headernote {
+            position: relative;
+            min-height: 258px;
+            width: 33%;
+
+        }
+
+        &--headernote::before {
+            content: "УСПІШНІ КЕЙСИ";
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $color-after;
+            font-weight: 500;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            top: 20px;
+            left: 20px;
+        }
+
+        &--headernote::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 57px;
+            border-bottom: 2px solid $color-white;
+        }
+
+        &__title {
+            font-size: 24px;
+            line-height: 28px;
+            display: flex;
+            align-items: flex-end;
+            color: $color-main-soft;
+        }
+
+        &__footnote {
+            font-size: 18px;
+            line-height: 26px;
+            color: $color-grey-text;
+            padding-top: 20px;
+        }
+
+        &__description {
+            font-size: 18px;
+            line-height: 26px;
+            color: #000000;
+            display: none;
+            background-color: $color-grey-bg-alt;
+            width: 100%;
+            order: 1;
+            padding: 40px;
+            border: 1px solid $color-white;
+            text-align: center;
+        }
+    }
+    &-item:hover {
+        background-color: $color-grey-bg-alt;
+    }
+}
+
+.cases-item:hover + .cases-item__description {
+    display: block;
+}
