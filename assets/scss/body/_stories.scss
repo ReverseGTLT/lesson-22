@@ -5,12 +5,12 @@
     position: relative;
 
     &-hight {
-        height: 880px;
+        height: 831px;
         overflow: hidden;
         padding-top: 40px;
 
         @include lg {
-            height: 921px;
+            height: 900px;
             padding-top: 20px;
         }
     }
@@ -89,7 +89,7 @@
         }
 
         &__picture {
-            max-height: 233px;
+
 
             &-image {
                 width: 100%;
@@ -164,11 +164,16 @@
             color: $color-white;
             display: block;
             margin-inline: auto;
-            margin-top: 60px;
+            margin-top: 108px;
             cursor: pointer;
+            transition: 0.3s;
 
-            @include lg {
-                margin-top: 80px;
+            &:hover {
+                background: $color-btn-hover;
+            }
+
+            &:active {
+                background: $color-btn-active;
             }
         }
     }

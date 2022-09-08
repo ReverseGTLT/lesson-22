@@ -1,0 +1,124 @@
+@use "../presets" as *;
+
+.footer {
+    background-color: $color-grey-bg;
+
+    &-box {
+        min-height: 151px;
+    }
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        border-top: 4px solid $color-grey-separator;
+        padding-top: 28px;
+
+        @include lg {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 18px;
+            gap: 20px;
+        }
+    }
+
+    &-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+    &-address {
+        display: flex;
+        gap: 48px;
+
+        @include lg {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        &__text {
+            font-size: 16px;
+            line-height: 19px;
+            color: $color-main;
+            display: block;
+            font-weight: 500;
+        }
+
+        &__map {
+            &-link {
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 14px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: $color-active-regular;
+                width: 164px;
+                transition: 0.3s;
+                &:hover {
+                    color: $color-after;
+                }
+            }
+        }
+    }
+
+    &-contact {
+        display: flex;
+        gap: 28px;
+        align-items: center;
+
+        @include lg {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__facebook {
+            width: 38px;
+            height: 38px;
+            background-image: url(../../../images/footer/Vector.svg);
+            transition: 0.3s;
+
+            &:hover {
+                background-image: url(../../images/footer/fasebook-header.svg);
+            }
+        }
+
+        &__telephone {
+            &-link {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 19px;
+                text-align: right;
+                color: $color-main-alt;
+            }
+        }
+
+        &__mail {
+            &-link {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 19px;
+                color: $color-active-regular;
+                transition: 0.3s;
+                &:hover {
+                    color: $color-after;
+                }
+            }
+
+        }
+    }
+
+    &-info {
+        &__footnote {
+            font-size: 16px;
+            line-height: 19px;
+            color: $color-grey-text;
+
+            @include lg {
+                text-align: center;
+                padding-bottom: 118px;
+            }
+        }
+    }
+}
