@@ -580,7 +580,7 @@ address {
       -ms-transform: rotate(315deg);
           transform: rotateZ(315deg);
   right: -10px;
-  top: 3px;
+  top: 4px;
 }
 .services-caption {
   padding-bottom: 69px;
@@ -882,10 +882,6 @@ address {
   }
 }
 
-.clients {
-  max-width: 1440px;
-  margin-inline: auto;
-}
 .clients-title {
   font-size: 14px;
   line-height: 17px;
@@ -893,7 +889,7 @@ address {
   text-transform: uppercase;
   color: #323264;
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 27px;
 }
 .clients-cards {
   display: grid;
@@ -908,6 +904,137 @@ address {
 .clients-cards__item-image {
   width: 100%;
   height: 100%;
+}
+
+.stories {
+  background-color: #F5F5FA;
+  position: relative;
+}
+.stories-hight {
+  height: 880px;
+  overflow: hidden;
+  padding-top: 40px;
+}
+.stories-headnote {
+  display: block;
+}
+.stories-headnote__link {
+  position: relative;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #24A3FF;
+}
+.stories-headnote__link::after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid #24A3FF;
+  border-right: 2px solid #24A3FF;
+  -webkit-transform: rotateZ(315deg);
+      -ms-transform: rotate(315deg);
+          transform: rotateZ(315deg);
+  right: -10px;
+  top: 4px;
+}
+.stories-title__text {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 50px;
+  background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.stories-box {
+  padding-top: 40px;
+  -webkit-columns: 3 413px;
+     -moz-columns: 3 413px;
+          columns: 3 413px;
+  gap: 40px;
+}
+.stories-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 40px;
+  width: 100%;
+}
+.stories-card--order {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+.stories-card__picture {
+  max-height: 233px;
+}
+.stories-card__picture-image {
+  width: 100%;
+}
+.stories-card__info {
+  padding: 20px;
+}
+.stories-card__info-link {
+  font-size: 18px;
+  line-height: 21px;
+  color: #24A3FF;
+  font-weight: 400;
+}
+.stories-card__info-date {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #B3B3BA;
+  padding-top: 10px;
+  padding-bottom: 17px;
+}
+.stories-card__info-description {
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+  padding-top: 20px;
+  border-top: 4px solid #E6E6F0;
+  max-width: 372px;
+}
+.stories-card:nth-of-type(1) {
+  -webkit-box-ordinal-group: -1;
+      -ms-flex-order: -2;
+          order: -2;
+}
+.stories-card:nth-of-type(3) {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+.stories-footer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 200px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 245, 250, 0)), color-stop(86.5%, #F5F5FA));
+  background: -o-linear-gradient(top, rgba(245, 245, 250, 0) 0%, #F5F5FA 86.5%);
+  background: linear-gradient(180deg, rgba(245, 245, 250, 0) 0%, #F5F5FA 86.5%);
+}
+.stories-footer__btn {
+  width: 250px;
+  height: 50px;
+  background: #24A3FF;
+  -webkit-box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+          box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+  border-radius: 12px;
+  border: none;
+  color: #ffffff;
+  display: block;
+  margin-inline: auto;
+  margin-top: 60px;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .header-burger {
@@ -1018,6 +1145,33 @@ address {
   }
   .clients-cards {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .stories-hight {
+    height: 921px;
+    padding-top: 20px;
+  }
+  .stories-title__text {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .stories-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 20px;
+  }
+  .stories-card {
+    display: block;
+    margin-bottom: 0;
+  }
+  .stories-card__info-date {
+    padding-bottom: 0;
+  }
+  .stories-card__info-description {
+    display: none;
+  }
+  .stories-footer__btn {
+    margin-top: 80px;
   }
 }
 @media (max-width: 767.8px) {
@@ -1155,6 +1309,5 @@ address {
   }
   .clients-cards__item {
     min-height: 90px;
-    min-width: 187.5px;
   }
 }

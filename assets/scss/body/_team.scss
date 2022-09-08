@@ -56,19 +56,18 @@
                 color: $color-active-regular;
                 letter-spacing: 1px;
                 text-transform: uppercase;
-            }
-
-            &-link::after {
-                content: "";
-                position: absolute;
-                background-color: transparent;
-                border-bottom: 2px solid $color-active-regular;
-                border-right: 2px solid $color-active-regular;
-                height: 6px;
-                width: 6px;
-                right: -10px;
-                top: 4px;
-                transform: rotateZ(315deg);
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background-color: transparent;
+                    border-bottom: 2px solid $color-active-regular;
+                    border-right: 2px solid $color-active-regular;
+                    height: 6px;
+                    width: 6px;
+                    right: -10px;
+                    top: 4px;
+                    transform: rotateZ(315deg);
+                }
             }
         }
 

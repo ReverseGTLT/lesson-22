@@ -1,9 +1,6 @@
 @use "../presets" as *;
 
 .clients {
-    max-width: 1440px;
-    margin-inline: auto;
-
     &-title {
         font-size: 14px;
         line-height: 17px;
@@ -11,7 +8,7 @@
         text-transform: uppercase;
         color: $color-main;
         text-align: center;
-        padding-bottom: 30px;
+        padding-bottom: 27px;
     }
     &-cards {
         display: grid;
@@ -34,13 +31,11 @@
 
             @include md {
                 min-height: 90px;
-                min-width: 187.5px;
             }
             &-image {
                 width: 100%;
                 height: 100%;
             }
         }
-
     }
 }
