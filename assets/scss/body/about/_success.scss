@@ -1,0 +1,82 @@
+@use "../../presets" as *;
+
+.success {
+    background-color: $color-grey-bg;
+
+    &-box {
+        padding-top: 28px;
+        padding-bottom: 30px;
+    }
+
+    &-title {
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $color-main;
+    }
+
+    &-cards {
+        display: flex;
+        gap: $gap * 2;
+        padding-block: 30px;
+
+        @include lg {
+            gap: $gap;
+            justify-content: center;
+        }
+    }
+
+    &-card {
+        &--hide {
+             @include lg {
+                display: none;
+             }
+        }
+        &__link {
+            &-image {
+                width: 100%;
+            }
+        }
+    }
+
+    &-points {
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+    }
+
+    &-point {
+        width: 16px;
+        height: 16px;
+        background-color: $color-active-regular;
+        opacity: 0.2;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &--active {
+            opacity: 1;
+        }
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+        &:active {
+            opacity: 1;
+        }
+
+        &--hide {
+            display: none;
+
+            @include lg-min {
+                display: block;
+            }
+        }
+    }
+}
+
+.success-point--active:hover {
+    opacity: 1;
+}

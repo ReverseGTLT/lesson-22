@@ -1,0 +1,108 @@
+@use "../../presets" as *;
+
+
+.header {
+    &--about {
+        position: static;
+    }
+
+    &-box {
+        &--about {
+            grid-template-rows: 25px 35px;
+        }
+    }
+
+    &-about {
+        display: flex;
+        align-items: center;
+        align-items: flex-start;
+        padding-top: 36px;
+    }
+
+    &-logo {
+        &--about {
+            padding-right: 25px;
+
+            @include lg {
+                padding-right: 10px;
+            }
+        }
+
+        &__text {
+            position: relative;
+            font-size: 38px;
+            line-height: 45px;
+            color: $color-main;
+
+            @include lg {
+                font-size: 19px;
+                line-height: 22px;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                height: 47px;
+                width: 21px;
+                background-image: url(../../images/about/about-slash.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                left: -20px;
+
+                @include lg {
+                    width: 11px;
+                    height: 24px;
+                    left: -10px;
+                }
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                height: 47px;
+                width: 42px;
+                background-image: url(../../images/about/about-symbol.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+
+                @include lg {
+                    width: 21px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+
+    &-info {
+        &__social {
+            &--about {
+                background-image: url(../../images/about/about-facebook.svg);
+
+                &:hover {
+                    background-image: url(../../images/about/about-hover-facebook.svg);
+                }
+            }
+        }
+    }
+
+    &-burger {
+        &__item {
+            &--about {
+                background-color: $color-main;
+            }
+        }
+    }
+}
+
+.about {
+    color: $color-grey-text;
+}
+
+.color {
+    color: $color-active-regular;
+}
+
+.current {
+    text-decoration: underline;
+    color: $color-after;
+}

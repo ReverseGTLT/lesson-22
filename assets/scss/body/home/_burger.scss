@@ -1,4 +1,4 @@
-@use "../presets" as *;
+@use "../../presets" as *;
 
 .mobile-open {
     height: 310px;
@@ -9,6 +9,7 @@
     position: fixed;
     top: 5px;
     right: 0;
+    z-index: 3;
 }
 
 .mobile-vision {
@@ -18,7 +19,7 @@
     flex-direction: column;
     text-align: center;
 
-    @include md {
+    @include lg {
         display: flex;
         flex-direction: column;
         text-align: center;
