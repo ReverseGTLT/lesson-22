@@ -1,4 +1,5 @@
 @use "../../presets" as *;
+@use "../../mixin" as *;
 
 .success {
     background-color: $color-grey-bg;
@@ -19,11 +20,11 @@
 
     &-cards {
         display: flex;
-        gap: $gap * 2;
-        padding-block: 30px;
+        column-gap: $gap * 2;
+        padding-block: 28px;
 
         @include lg {
-            gap: $gap;
+            column-gap: $gap;
             justify-content: center;
         }
     }
@@ -68,10 +69,10 @@
         }
 
         &--hide {
-            display: none;
+            display: block;
 
             @include lg-min {
-                display: block;
+                display: none;
             }
         }
     }

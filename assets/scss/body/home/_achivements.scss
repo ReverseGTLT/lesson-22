@@ -1,4 +1,5 @@
 @use "../../presets" as *;
+@use "../../mixin" as *;
 
 $id: (
     "#first",
@@ -16,9 +17,7 @@ $id: (
     }
 
     #{$key}:checked~.achivements-designations #{$key}Text {
-        background: $color-gradient-red-text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+        @include gradient-soft;
     }
 
     #{$key}:checked~.achivements-values #{$key}Value {
@@ -97,9 +96,7 @@ $id: (
         }
 
         &__text:hover {
-            background: $color-gradient-red-text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            @include gradient-soft;
         }
     }
 
@@ -123,10 +120,7 @@ $id: (
             }
 
             &-headernote {
-                background: $color-gradient-headernote;
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
+                @include gradient;
                 font-size: 14px;
                 line-height: 17px;
                 letter-spacing: 1px;

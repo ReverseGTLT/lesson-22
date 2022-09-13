@@ -1,4 +1,5 @@
 @use "../../presets" as *;
+@use "../../mixin" as *;
 
 .footer {
     background-color: $color-grey-bg;
@@ -77,6 +78,7 @@
         &__facebook {
             width: 38px;
             height: 38px;
+            cursor: pointer;
             background-image: url(../../images/footer/fasebook-header.svg);
             transition: 0.3s;
 

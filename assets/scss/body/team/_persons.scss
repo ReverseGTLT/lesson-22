@@ -1,0 +1,80 @@
+@use "../../presets" as *;
+@use "../../mixin" as *;
+
+.persons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $gap * 2;
+    justify-content: center;
+    padding-bottom: 60px;
+
+    @include lg {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include md {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding-bottom: 36px;
+    }
+
+    &-card {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: $gap * 0.5;
+
+        @include md {
+            grid-template-columns: 1fr 1fr;
+            align-items: end;
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            &-link {
+                font-size: 18px;
+                line-height: 21px;
+                font-weight: 500;
+                color: $color-main;
+                transition: 0.3s;
+
+                &:hover {
+                    color: $color-accent;
+                }
+            }
+
+            &-post {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                color: $color-grey-text;
+            }
+        }
+
+        &__box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include md {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: $gap * 0.5;
+            }
+        }
+
+        &__picture {
+            &-image {
+                width: 100%;
+                min-width: 158px;
+                min-height: 191px;
+            }
+        }
+    }
+}
+
+.footer-content--underline {
+    border-top: none;
+}

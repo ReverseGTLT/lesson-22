@@ -1,3 +1,6 @@
 @use "presets" as *;
-@use "body/home" as *;
-@use "body/about" as *;
+@use "mixin" as *;
+@use "common" as *;
+@use "body" as *;
+
+

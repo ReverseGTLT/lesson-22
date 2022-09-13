@@ -1,0 +1,29 @@
+@use "../presets" as *;
+@use "../common" as *;
+
+
+@mixin animation {
+    @keyframes value {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+@mixin gradient {
+    background: $color-gradient-headernote;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin gradient-soft {
+    background: $color-gradient-red-text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

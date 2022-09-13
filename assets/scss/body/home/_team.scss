@@ -1,4 +1,5 @@
 @use "../../presets" as *;
+@use "../../mixin" as *;
 
 .team {
     padding-top: $gap * 3;
@@ -75,10 +76,7 @@
             font-weight: 700;
             font-size: 42px;
             line-height: 50px;
-            background: $color-gradient-red-text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            @include gradient-soft;
             margin-top: 5px;
             padding-right: 30px;
 

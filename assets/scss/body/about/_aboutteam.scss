@@ -1,10 +1,11 @@
 @use "../../presets" as *;
+@use "../../mixin" as *;
 
 
 .photo {
     margin-inline: auto;
     max-width: 1440px;
-    
+
     background: url(../../images/about/photo.png) no-repeat top center;
     background-size: cover;
     display: flex;
