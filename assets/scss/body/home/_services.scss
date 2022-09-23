@@ -108,19 +108,30 @@
             }
 
             &-title {
-                color: $color-active-regular;
-                font-size: 24px;
-                line-height: 28px;
-                font-weight: 500;
                 padding-bottom: 16px;
                 grid-area: tl;
 
                 @include md {
-                    font-size: 18px;
-                    line-height: 21px;
                     display: flex;
                     align-self: center;
                     padding-bottom: 0;
+                }
+            }
+
+            &-link {
+                color: $color-active-regular;
+                font-size: 24px;
+                line-height: 28px;
+                font-weight: 500;
+                transition: 0.3s;
+
+                &:hover {
+                    color: $color-accent;
+                }
+
+                @include md {
+                    font-size: 18px;
+                    line-height: 21px;
                 }
             }
 
